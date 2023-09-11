@@ -8,5 +8,5 @@ RUN npm install & npm run build
 
 
 ## build web-server
-FROM nginx:alpine
+FROM nginx:latest
 COPY --from=build /app/build /usr/share/nginx/html
