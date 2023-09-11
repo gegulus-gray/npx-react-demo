@@ -7,7 +7,7 @@ orbs:
 
 jobs:
   build-and-push:
-    enviroment:
+    environment:
       DOCKER_IMAGE: gegulusgray/npx-react-demo
       DOCKER_TAG: v1.0
     executor: docker/docker
