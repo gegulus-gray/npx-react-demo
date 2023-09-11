@@ -4,7 +4,9 @@ FROM node:latest AS build
 WORKDIR /app
 COPY . /app
 
-RUN npm install & npm run build
+RUN npm install
+RUN npm install react-scripts
+RUN npm run build
 
 
 ## build web-server
