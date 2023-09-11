@@ -1,5 +1,5 @@
 ## build environment JS
-FROM node:20-alpine AS build
+FROM node:latest AS build
 
 WORKDIR /app
 COPY . /app
