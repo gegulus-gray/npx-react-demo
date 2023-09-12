@@ -30,6 +30,7 @@ jobs:
   deploy:
     executor: docker/docker
     steps:
+      - checkout
       - run:
           name: fix ssh could not resolve hostname
           commnad: |
