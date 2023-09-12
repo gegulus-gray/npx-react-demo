@@ -31,7 +31,8 @@ jobs:
     executor: docker/docker
     steps:
       - add_ssh_keys:
-        - "2e:20:ce:c2:97:3d:34:26:87:64:c0:ee:5c:e2:4d:79"
+          fingerprints:
+            - "2e:20:ce:c2:97:3d:34:26:87:64:c0:ee:5c:e2:4d:79"
       - run:  ssh -oStrictHostKeyChecking=no -v circleci@157.245.203.225 "./pull-and-deploy.sh"
 
 
