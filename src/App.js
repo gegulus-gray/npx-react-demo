@@ -9,7 +9,8 @@ function App() {
         <p>
           Hello Reactjs!
         </p>
-        <h1>My github is gegulus-gray</h1>
+        <h1>Hello world!</h1>
+        <a className="Applink" href="https://github.com/gegulus-gray">My github is gegulus-gray</a>
       </header>
     </div>
   );
