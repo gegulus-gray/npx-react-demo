@@ -38,7 +38,7 @@ jobs:
       - add_ssh_keys:
           ## Please add $SSH_KEY_FINGERPRINT, $DEPLOYED_USER@ and DEPLOYED_SERVER to project's environment sooner
           fingerprints:
-            - "90:d2:66:0f:48:02:5d:a0:88:eb:1c:52:43:5e:46:56"
+            - "2c:22:e4:0d:15:21:e9:19:c9:3f:b1:41:0e:82:53:14"
       - run:  ssh -o StrictHostKeyChecking=no -v circleci@157.245.203.225 "./pull-and-deploy.sh"
 
 
