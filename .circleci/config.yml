@@ -30,11 +30,16 @@ jobs:
   deploy:
     executor: docker/docker
     steps:
+      - checkout:
+      - run:
+          name: fix ssh could not resolve hostname
+          commnad: |
+            ssh-keyscan 157.245.203.225 >> ~/.ssh/known_hosts
       - add_ssh_keys:
           ## Please add $SSH_KEY_FINGERPRINT, $DEPLOYED_USER@ and DEPLOYED_SERVER to project's environment sooner
           fingerprints:
             - "2e:20:ce:c2:97:3d:34:26:87:64:c0:ee:5c:e2:4d:79"
-      - run:  ssh -oStrictHostKeyChecking=no -v circleci@157.245.203.225 "./pull-and-deploy.sh"
+      - run:  ssh -oStrictHostKeyChecking=no circleci@157.245.203.225 "./pull-and-deploy.sh"
 
 
 workflows:
